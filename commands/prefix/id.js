@@ -10,7 +10,7 @@ module.exports = {
       "components": [
         {
           "type": 10,
-          "content": `Your **Discord ID** is ${message.author.id}.`
+          "content": `Your **Discord ID** is \`${message.author.id}\`.`
         }
       ]
     }
