@@ -2,21 +2,16 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = (client) => {
-  // prefix
-  const prefixPath = path.join(__dirname, "../commands/prefix");
-  const prefixFiles = fs.readdirSync(prefixPath).filter(f => f.endsWith(".js"));
+  const eventPath = path.join(__dirname, "../events");
+  const eventFiles = fs.readdirSync(eventPath).filter(f => f.endsWith(".js"));
 
-  for (const file of prefixFiles) {
-    const cmd = require(`../commands/prefix/${file}`);
-    client.prefixCommands.set(cmd.name, cmd);
-  }
+  for (const file of eventFiles) {
+    const event = require(`../events/${file}`);
 
-  // slash
-  const slashPath = path.join(__dirname, "../commands/slash");
-  const slashFiles = fs.readdirSync(slashPath).filter(f => f.endsWith(".js"));
-
-  for (const file of slashFiles) {
-    const cmd = require(`../commands/slash/${file}`);
-    client.slashCommands.set(cmd.data.name, cmd);
+    if (event.once) {
+      client.once(event.name, (...args) => event.execute(client, ...args));
+    } else {
+      client.on(event.name, (...args) => event.execute(client, ...args));
+    }
   }
 };
