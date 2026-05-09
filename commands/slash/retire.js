@@ -117,7 +117,9 @@ module.exports = {
       ]
     }
   ]
-})
+});
+
+    await interaction.reply("<:check:1502740417370787881> **Successfully** processed retirement.")
 
     }
 }
