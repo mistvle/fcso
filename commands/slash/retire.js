@@ -119,7 +119,7 @@ module.exports = {
   ]
 });
 
-    await interaction.reply("<:check:1502740417370787881> **Successfully** processed retirement.")
+    await interaction.reply({content: "<:check:1502740417370787881> **Successfully** processed retirement.", flags: 64})
 
     }
 }
