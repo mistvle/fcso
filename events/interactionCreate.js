@@ -26,7 +26,7 @@ module.exports = {
     } catch (err) {
       console.error(err);
       if (!interaction.replied) {
-        interaction.reply({ content: "Error occurred.", ephemeral: true });
+        interaction.reply({ content: "<:xMark:1502740326668828703> An **error** occurred.", ephemeral: true });
       }
     }
   }
