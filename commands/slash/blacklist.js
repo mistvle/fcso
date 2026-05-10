@@ -77,5 +77,6 @@ module.exports = {
 });
     await user.roles.add("1323364530138386494");
     await user.send(`<:fcso_arrow:1501781686764179588> You have been **blacklisted** from the <:FCSO:1114242855557402675> **Florence County Sheriff's Office**.\n**Duration:** ${duration}`)
+    await interaction.reply({content: "<:fcso_check:1497268123957723377> **Successfully** logged blacklist.", flags: 64})
     }
 }
