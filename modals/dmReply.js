@@ -38,7 +38,7 @@ module.exports = {
     });
 
     await interaction.reply({
-      content: "<:fcso_check:1497268123957723377> **Successfully** sent reply.",
+      content: "<:check:1502740417370787881> **Successfully** sent reply.",
       ephemeral: true
     });
   }

@@ -117,7 +117,7 @@ try {
     }).catch(() => {});
   }
 
-  return message.reply(`<:fcso_check:1497268123957723377> **Successfully** sent message to <@${userId}>.`);
+  return message.reply(`<:check:1502740417370787881> **Successfully** sent message to <@${userId}>.`);
 } catch (err) {
   console.error("DM command error:", err);
   return message.reply("<:xMark:1502740326668828703> Failed to messge user.");
