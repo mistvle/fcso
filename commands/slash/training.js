@@ -17,7 +17,7 @@ module.exports = {
 
     )
 
-    .addSubCommand(subcommand => subcommand
+    .addSubcommand(subcommand => subcommand
         .setName("vote")
         .setDescription("Start a training vote.")
         .addNumberOption(option => option
