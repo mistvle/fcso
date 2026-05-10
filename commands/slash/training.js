@@ -30,7 +30,7 @@ module.exports = {
 
     ),
 
-    async exeucte (interaction) {
+    async execute (interaction) {
         const sub = interaction.options.getSubcommand();
 
         if (sub === "start") {
@@ -210,6 +210,8 @@ module.exports = {
 
 // ✅ auto react
 await msg.react("✅");
+
+await interaction.reply({content: "<:check:1502740417370787881> **Successfully** hosted training vote.", flags: 64})
     }
     }
 }
