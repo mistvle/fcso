@@ -99,6 +99,62 @@ module.exports = {
             if (!hasRole && !isAdmin) {
                 return interaction.reply({content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.", flags: 64})
             }
+
+        const channel = interaction.guild.channels.cache.get("1464767095853023273");
+        await channel.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1493677741801996488/1502821804924731515/image.png?ex=6a011b5f&is=69ffc9df&hm=db72d5dad9ac6e8bcf6dcc8264545bfa29325b16662b360fe45332947dcaf9e5&=&format=webp&quality=lossless&width=1872&height=656"
+              }
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": "The recent training has now come to an end. Congratulations to all the cadets who have passed. If you were unable to attend this training, another training will be hosted shortly to ensure all cadets are trained properly. We wish all remaining cadets the best of luck with their training. Ensure to keep an eye out on this channel for the next training."
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1493677741801996488/1502496384002031706/Copy_of_Copy_of_GG_-_13.png?ex=6a00950c&is=69ff438c&hm=f649ac59044116ca7ab9fef41098da0ae4ecaad67feaece2d26235e9953916ec&=&format=webp&quality=lossless&width=1768&height=152"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+});
+    await interaction.reply({content: "<:check:1502740417370787881> **Successfully** ended training.", flags: 64})
+
+
+    }
+
+    if (sub === "vote") {
+        const hasRole = interaction.member.roles.cache.has("1461145178021564477")
+            const isAdmin = interaction.member.permissions.has("Administrator");
+
+            if (!hasRole && !isAdmin) {
+                return interaction.reply({content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.", flags: 64})
+            }
         const minutes = interaction.options.getNumber("time");
         const timestamp = Math.floor(
   (Date.now() + (minutes * 60 * 1000)) / 1000
@@ -154,21 +210,6 @@ module.exports = {
 
 // ✅ auto react
 await msg.react("✅");
-    await interaction.reply({content: "<:check:1502740417370787881> **Successfully** ended training.", flags: 64})
-
-
-    }
-
-    if (sub === "vote") {
-                const hasRole = interaction.member.roles.cache.has("1461145178021564477")
-            const isAdmin = interaction.member.permissions.has("Administrator");
-
-            if (!hasRole && !isAdmin) {
-                return interaction.reply({content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.", flags: 64})
-            }
-
-        const channel = interaction.guild.channels.cache.get("1464767095853023273");
-        await channel.send()
     }
     }
 }
