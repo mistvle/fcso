@@ -35,7 +35,7 @@ module.exports = {
 
         ]
         const hasRole = required_role_ids.some(id =>
-  message.member.roles.cache.has(id)
+  interaction.member.roles.cache.has(id)
 
 );
     const isAdmin = interaction.member.permissions.has("Administrator");
