@@ -84,7 +84,7 @@ module.exports = {
   ]
 });
 
-    await user.send({
+    await deputy.send({
   "flags": 32768,
   "components": [
     {
@@ -136,6 +136,6 @@ module.exports = {
   ]
 });
 
-    await interaction.reply("<:check:1502740417370787881> **Successfully** issued evaluation.")
+    await interaction.reply({content: "<:check:1502740417370787881> **Successfully** issued evaluation.", flags: 64})
     }
 }
