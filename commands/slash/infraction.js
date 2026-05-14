@@ -97,7 +97,7 @@ module.exports = {
             const logChannel = interaction.guild.channels.cache.get("1109523624718762002");
 
             // LOG CHANNEL
-            await logChannel.send({
+            const logMessage = await logChannel.send({
   "flags": 32768,
   "components": [
     {
@@ -133,6 +133,14 @@ module.exports = {
     }
   ]
 });
+    const thread = await logMessage.startThread({
+    name: `Infraction - #${id}`,
+    autoArchiveDuration: 10080
+});
+
+await thread.send(
+    `${interaction.user} Please provide proof for this infraction below.`
+);
 
             // USER DM
             await user.send({
