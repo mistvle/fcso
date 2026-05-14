@@ -94,7 +94,7 @@ module.exports = {
 
             const id = result.lastInsertRowid;
 
-            const logChannel = interaction.guild.channels.cache.get("LOG_CHANNEL_ID");
+            const logChannel = interaction.guild.channels.cache.get("1109523624718762002");
 
             // LOG CHANNEL
             await logChannel.send({
