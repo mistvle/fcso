@@ -113,7 +113,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": `An infraction has been issued by ${interaction.user}. View details below.\n\n<:fcso_people:1501770349694681109> **User:** ${user}\n<:fcso_pin:1501770114830434324> **Type:** ${type}\n<:fcso_pen:1501769575614775466> **Reason:** ${reason}\n<:fcso_briefcase:1501769870889586759> **Infraction ID:** ${id}.`
+          "content": `An infraction has been issued by ${interaction.user}. View details below.\n\n<:fcso_people:1501770349694681109> **User:** ${user}\n<:fcso_pin:1501770114830434324> **Type:** ${type}\n<:fcso_pen:1501769575614775466> **Reason:** ${reason}\n<:fcso_briefcase:1501769870889586759> **Infraction ID:** ${id}`
         },
         {
           "type": 14,
@@ -151,7 +151,7 @@ module.exports = {
         },
         {
           "type": 10,
-          "content": `An infraction has been issued to you. View information regarding it below. If you have inquires regarding your infraction, feel free to open a ticket.\n\n<:fcso_pin:1501770114830434324> **Type:** ${type}\n<:fcso_pen:1501769575614775466> **Reason:** ${reason}\n<:fcso_briefcase:1501769870889586759> **Infraction ID:** ${id}.`
+          "content": `An infraction has been issued to you. View information regarding it below. If you have inquires regarding your infraction, feel free to open a ticket.\n\n<:fcso_pin:1501770114830434324> **Type:** ${type}\n<:fcso_pen:1501769575614775466> **Reason:** ${reason}\n<:fcso_briefcase:1501769870889586759> **Infraction ID:** ${id}`
         },
         {
           "type": 14,
@@ -204,7 +204,7 @@ module.exports = {
             ).join("\n\n");
 
             await interaction.reply({
-  "flags": 32768,
+  "flags": 32832,
   "components": [
     {
       "type": 17,
