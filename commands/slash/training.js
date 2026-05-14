@@ -209,7 +209,7 @@ module.exports = {
 });
 
 // ✅ auto react
-await msg.react("<:fcso_check:1497268123957723377>");
+await msg.react("<:check:1502740417370787881>");
 
 await interaction.reply({content: "<:check:1502740417370787881> **Successfully** hosted training vote.", flags: 64})
     }
