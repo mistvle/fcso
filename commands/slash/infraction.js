@@ -192,7 +192,7 @@ module.exports = {
 
             if (!infractions.length) {
                 return interaction.reply({
-                    content: "<:xMark:1502740326668828703> This user has no infractions.",
+                    content: "<:xMark:1502740326668828703> No infractions **found** for this user.",
                     flags: 64
                 });
             }
