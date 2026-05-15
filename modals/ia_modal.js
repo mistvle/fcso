@@ -64,7 +64,7 @@ module.exports = {
                         },
                         {
                             type: 10,
-                            content: `-# @everyone | ${interaction.user}`
+                            content: `-# <@&1120063570105860167> | ${interaction.user}`
                         },
                         {
                             type: 14,
