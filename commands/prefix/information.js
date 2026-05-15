@@ -6,9 +6,9 @@ module.exports = {
             return
         }
         const channel = message.guild.channels.cache.get("1303028709766332436");
+        await message.delete();
         await channel.send({
   "attachments": [],
-  "webhook_id": "1323877803858333727",
   "flags": 32768,
   "components": [
     {

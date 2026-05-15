@@ -1,10 +1,10 @@
 module.exports = {
     name: "application",
     async execute (message) {
+        await message.delete();
         if (!message.member.permissions.has("Administrator")) {
             return message.reply({
   "attachments": [],
-  "webhook_id": "1435464321046937610",
   "flags": 32768,
   "components": [
     {
