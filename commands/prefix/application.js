@@ -3,7 +3,10 @@ module.exports = {
     async execute (message) {
         await message.delete();
         if (!message.member.permissions.has("Administrator")) {
-            return message.reply({
+            return;
+        }
+        const channel = message.guild.channels.cache.get("1479961955836891218")
+        await channel.send({
   "attachments": [],
   "flags": 32768,
   "components": [
@@ -75,6 +78,5 @@ module.exports = {
     }
   ]
 })
-        }
     }
 }
