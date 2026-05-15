@@ -28,6 +28,7 @@ module.exports = {
         .addStringOption(option => option
             .setName("feedback")
             .setDescription("Input feedback for the training.")
+            .setRequired(true)
         )
     )
 
