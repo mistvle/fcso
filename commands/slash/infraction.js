@@ -167,6 +167,7 @@ const member = await interaction.guild.members
         if (!removedRoles.length) {
             return interaction.reply({content: "<:fsco_xMark:1506499171509866516> This user is not a department member.", flags: 64});
         }
+        await member.roles.remove(removedRoles);
             }
 
             // LOG CHANNEL
