@@ -23,12 +23,13 @@ module.exports = {
         const isAdmin = interaction.member.permissions.has("Administrator");
 
         if (!hasRole && !isAdmin) {
-            return interaction.reply({content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.", flags: 64})
+            return interaction.reply({content: "<:fsco_xMark:1506499171509866516> You do not have permission to run this command.", flags: 64})
 
         }
 
         const user = interaction.options.getUser('user');
         const shift = interaction.options.getString('shift_time');
+        await user.roles.add("1457943782786859123");
 
         const channel = interaction.guild.channels.cache.get("1464476938373566635");
         await channel.send({
@@ -66,6 +67,7 @@ module.exports = {
       ]
     }
   ]
-})
+});
+  await interaction.reply({content: "<:fcso_check:1506063526182125608> **Successfully** issued Deputy of the Week."})
     }
 }

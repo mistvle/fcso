@@ -30,7 +30,7 @@ module.exports = {
     async execute (interaction) {
         const isAdmin = interaction.member.permissions.has("Administrator");
         if (!isAdmin) {
-            return interaction.reply({content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.", flags: 64})
+            return interaction.reply({content: "<:fsco_xMark:1506499171509866516> You do not have permission to run this command.", flags: 64})
 
         }
 
@@ -77,6 +77,6 @@ module.exports = {
 });
     await user.roles.add("1323364530138386494");
     await user.send(`<:fcso_arrow:1501781686764179588> You have been **blacklisted** from the <:FCSO:1114242855557402675> **Florence County Sheriff's Office**.\n**Duration:** ${duration}`)
-    await interaction.reply({content: "<:fcso_check:1497268123957723377> **Successfully** logged blacklist.", flags: 64})
+    await interaction.reply({content: "<:fcso_check:1506063526182125608> **Successfully** logged blacklist.", flags: 64})
     }
 }
