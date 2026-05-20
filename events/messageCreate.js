@@ -3,9 +3,7 @@ module.exports = {
 
   async execute(client, message) {
 
-    console.log(
-      `[MESSAGE] ${message.author.tag}: ${message.content}`
-    );
+
 
     if (message.author.bot) return;
 
