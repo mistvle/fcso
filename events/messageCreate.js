@@ -3,31 +3,47 @@ module.exports = {
 
   async execute(client, message) {
 
-    console.log("MESSAGE EVENT FIRED");
-    console.log(message.content);
+    console.log(
+      `[MESSAGE] ${message.author.tag}: ${message.content}`
+    );
 
     if (message.author.bot) return;
+
+    // ================= PREFIX COMMANDS =================
     if (!message.content.startsWith(client.prefix)) return;
 
-    const args = message.content.slice(client.prefix.length).trim().split(/ +/);
-
-    console.log(args);
+    const args = message.content
+      .slice(client.prefix.length)
+      .trim()
+      .split(/ +/);
 
     const cmdName = args.shift().toLowerCase();
 
-    console.log("COMMAND:", cmdName);
-
-    console.log(client.prefixCommands);
+    console.log(
+      `[PREFIX] ${message.author.tag} used ${client.prefix}${cmdName}`
+    );
 
     const cmd = client.prefixCommands.get(cmdName);
 
-    console.log("FOUND CMD:", cmd);
+    console.log(
+      `[COMMAND FOUND]: ${cmd ? "YES" : "NO"}`
+    );
 
     if (!cmd) return;
 
     try {
       await cmd.execute(message, args);
+
+      console.log(
+        `[COMMAND SUCCESS] ${cmdName}`
+      );
+
     } catch (err) {
+
+      console.error(
+        `[COMMAND ERROR] ${cmdName}`
+      );
+
       console.error(err);
     }
   }

@@ -81,6 +81,44 @@ module.exports = {
 
 
         ];
+        const logChannel = message.guild.channels.cache.get("1506675770494423090");
+        await logChannel.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 10,
+          "content": "# <:fcso_briefcase:1501769870889586759> Removal Log"
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": `${message.author} has removed a user. View information regarding it below.\n\n<:fcso_people:1501770349694681109> **User:** ${member}`
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1493677741801996488/1502496384002031706/Copy_of_Copy_of_GG_-_13.png?ex=6a0f158c&is=6a0dc40c&hm=114a26384989fd0dff410bf17372ae241e4599802243388a55d6b924b581d6a0&=&format=webp&quality=lossless&width=1768&height=152"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+});
+    await member.send("<:fcso_bell:1504698291139641354> You have been **removed** from the <:FCSO:1114242855557402675> **Florence County Sheriff's Office**.")
 
         // ================= SAVE ROLES =================
         const removedRoles = member.roles.cache
