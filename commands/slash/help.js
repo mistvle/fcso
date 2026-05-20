@@ -41,7 +41,7 @@ module.exports = {
           components: [
             {
               type: 10,
-              content: "# <:Wallet:1497493453829832875> Command Help"
+              content: "# <:fcso_clipboard:1502812608615551006> Command Help"
             },
             {
               type: 14,

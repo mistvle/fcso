@@ -66,7 +66,7 @@ module.exports = {
 
         if (!hasRole && !isAdmin) {
             return interaction.reply({
-                content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.",
+                content: "<:fsco_xMark:1506499171509866516> You do not have permission to run this command.",
                 flags: 64
             });
         }
@@ -180,7 +180,7 @@ module.exports = {
             ]);
 
             await interaction.reply({
-                content: "<:check:1502740417370787881> **Successfully** logged training.",
+                content: "<:fcso_check:1506063526182125608> **Successfully** logged training.",
                 flags: 64
             });
         }
@@ -291,7 +291,7 @@ module.exports = {
             }
 
             await interaction.reply({
-                content: "<:check:1502740417370787881> **Successfully** logged ride along.",
+                content: "<:fcso_check:1506063526182125608> **Successfully** logged ride along.",
                 flags: 64
             });
         }

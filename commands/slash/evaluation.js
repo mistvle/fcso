@@ -40,7 +40,7 @@ module.exports = {
 );
     const isAdmin = interaction.member.permissions.has("Administrator");
     if (!isAdmin && !hasRole) {
-        return interaction.reply({content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.", flags: 64})
+        return interaction.reply({content: "<:fsco_xMark:1506499171509866516> You do not have permission to run this command.", flags: 64})
     }
     const deputy = interaction.options.getUser("deputy");
     const rating = interaction.options.getInteger("rating");
@@ -136,6 +136,6 @@ module.exports = {
   ]
 });
 
-    await interaction.reply({content: "<:check:1502740417370787881> **Successfully** issued evaluation.", flags: 64})
+    await interaction.reply({content: "<:fcso_check:1506063526182125608> **Successfully** issued evaluation.", flags: 64})
     }
 }

@@ -11,7 +11,7 @@ const client = new Client({
   ]
 });
 
-client.prefix = "-";
+client.prefix = "$";
 
 // collections
 client.prefixCommands = new Collection();
