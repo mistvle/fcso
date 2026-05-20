@@ -3,10 +3,10 @@ module.exports = {
 
     async execute(message, args) {
 
-
+        const hasRole = message.member.roles.cache.has("1324271492225044490");
         const isAdmin = message.member.permissions.has("Administrator");
 
-        if (!isAdmin) {
+        if (!isAdmin && !hasRole) {
             return message.reply("<:fsco_xMark:1506499171509866516> You do not have permission to run this command.");
         }
 
