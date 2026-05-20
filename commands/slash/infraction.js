@@ -18,6 +18,7 @@ module.exports = {
             .setName("type")
             .setDescription("Select the infraction type.")
             .addChoices(
+                { name: "Inactivity Notice", value: "Inactivity Notice"},
                 { name: "Notice", value: "Notice" },
                 { name: "Warning", value: "Warning" },
                 { name: "Strike", value: "Strike" },
