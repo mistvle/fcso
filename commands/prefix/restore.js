@@ -31,6 +31,7 @@ module.exports = {
         await member.roles.add(roles);
 
         message.client.removedRoles.delete(member.id);
+        const logChannel = message.guild.channels.cache.get("1506675770494423090");
 
         message.reply(
             `<:fcso_check:1506063526182125608> **Successfully** restored department roles to ${member}.`
