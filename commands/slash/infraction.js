@@ -156,7 +156,7 @@ module.exports = {
 
         ];
 
-        const removedRoles = member.roles.cache
+        const removedRoles = user.roles.cache
             .filter(role => DEPT_ROLES.includes(role.id))
             .map(role => role.id);
 
