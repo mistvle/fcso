@@ -66,7 +66,7 @@ module.exports = {
 
         if (!isAdmin && !hasRole) {
             return interaction.reply({
-                content: "<:xMark:1502740326668828703> You do **not** have **permission** to run this command.",
+                content: "<:fsco_xMark:1506499171509866516> You do not have permission to run this command.",
                 flags: 64
             });
         }
@@ -96,6 +96,74 @@ module.exports = {
             const id = result.lastInsertRowid;
 
             const logChannel = interaction.guild.channels.cache.get("1109523624718762002");
+            if (type === "Termination") {
+              const DEPT_ROLES = [
+            "1109523623615680556",
+            "1109523623615680555",
+            "1436811752103739402",
+            "1109557731515449344",
+            "1457943782786859123",
+            "1461491529875984444",
+            "1109529658908745928",
+            "1109523623615680553",
+            "1324271492225044490",
+            "1110690730130817044",
+            "1109523623615680552",
+            "1461490715635876001",
+            "1483685612639883284",
+            "1110688600116428821",
+            "1109523623179452455",
+            "1461491099196723437",
+            "1109523623179452452",
+            "1461491160077041839",
+            "1436861503813844993",
+            "1303520421551013910",
+            "1465493511385120941",
+            "1120063570105860167",
+            "1461145178021564477",
+            "1109557992686370936",
+            "1469154648433885265",
+            "1469154490044125450",
+            "1383295729854058666",
+            "1120612626947395604",
+            "1465493912633475224",
+            "1465493486898778184",
+            "1465494024692437053",
+            "1120612903976960110",
+            "1465493978857214124",
+            "1465494107601506428",
+            "1444793728568135780",
+            "1114295664805957724",
+            "1437091249550000260",
+            "1381103991940972627",
+            "1465209143353675899",
+            "1329278799409451029",
+            "1461491848001355929",
+            "1465079478995910919",
+            "1465080116538507416",
+            "1465079602597728491",
+            "1465079680477565123",
+            "1465079753571827982",
+            "1465079807523033336",
+            "1461493677095653447",
+            "1298848312585224212",
+            "1120610879554195487",
+            "1436811781728239749",
+            "1109529646384554116",
+            "1303520413657206784",
+            "1120610381614821439"
+
+
+        ];
+
+        const removedRoles = member.roles.cache
+            .filter(role => DEPT_ROLES.includes(role.id))
+            .map(role => role.id);
+
+        if (!removedRoles.length) {
+            return interaction.reply({content: "<:fsco_xMark:1506499171509866516> This user is not a department member.", flags: 64});
+        }
+            }
 
             // LOG CHANNEL
             const logMessage = await logChannel.send({
@@ -182,7 +250,7 @@ await thread.send(
 }).catch(() => null);
 
             await interaction.reply({
-                content: "<:check:1502740417370787881> **Successfully** issued infraction.",
+                content: `<:fcso_check:1506063526182125608> **Successfully** issued infractio **#${id}.`,
                 flags: 64
             });
         }
@@ -201,7 +269,7 @@ await thread.send(
 
             if (!infractions.length) {
                 return interaction.reply({
-                    content: "<:xMark:1502740326668828703> No infractions **found** for this user.",
+                    content: "<:fsco_xMark:1506499171509866516> No infractions found for this user.",
                     flags: 64
                 });
             }
@@ -263,7 +331,7 @@ await thread.send(
 
             if (!infraction) {
                 return interaction.reply({
-                    content: "<:xMark:1502740326668828703> **Invalid** infraction ID.",
+                    content: "<:fsco_xMark:1506499171509866516> Please provide a valid infraction ID.",
                     flags: 64
                 });
             }
@@ -274,7 +342,7 @@ await thread.send(
             `).run(id);
 
             await interaction.reply({
-                content: `<:check:1502740417370787881> **Successfully** revoked infraction **#${id}**.`,
+                content: `<:fcso_check:1506063526182125608> **Successfully** revoked infraction **#${id}**.`,
                 flags: 64
             });
         }
