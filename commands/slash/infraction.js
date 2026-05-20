@@ -82,6 +82,10 @@ module.exports = {
             const type = interaction.options.getString("type");
             const reason = interaction.options.getString("reason");
 
+const member = await interaction.guild.members
+    .fetch(user.id)
+    .catch(() => null);
+
             const result = db.prepare(`
                 INSERT INTO infractions
                 (user_id, moderator_id, type, reason)
@@ -156,7 +160,7 @@ module.exports = {
 
         ];
 
-        const removedRoles = user.roles.cache
+        const removedRoles = member.roles.cache
             .filter(role => DEPT_ROLES.includes(role.id))
             .map(role => role.id);
 
