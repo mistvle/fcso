@@ -4,7 +4,7 @@ module.exports = {
     async execute (message, agrs) {
         const isAdmin = message.member.permissions.has("Administrator");
         if (!isAdmin) {
-            return message.reply("<:xMark:1502740326668828703> You do **not** have **permissions** to run this command.")
+            return message.reply("<:fsco_xMark:1506499171509866516> You do not have permission to run this command.")
 
         }
 

@@ -3,7 +3,7 @@ module.exports = {
     async execute (message) {
         await message.delete();
         if (!message.member.permissions.has("Administrator")) {
-            return;
+            return message.reply("<:fsco_xMark:1506499171509866516> You do not have permission to run this command.")
         }
         const channel = message.guild.channels.cache.get("1479961955836891218")
         await channel.send({

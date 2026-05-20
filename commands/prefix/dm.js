@@ -15,14 +15,14 @@ const LOG_CHANNEL_ID = "1109523625431805973";
 
 const isAdmin = message.member.permissions.has(PermissionsBitField.Flags.Administrator);
 if (!isAdmin) {
-  return message.reply("<:xMark:1502740326668828703> You do not have permission to use this command.");
+  return message.reply("<:fsco_xMark:1506499171509866516> You do not have permission to use this command.");
 }
 
 const userId = args[0];
 const text = args.slice(1).join(" ");
 
 if (!userId || !text) {
-  return message.reply("<:xMark:1502740326668828703> Failed to fetch a valid user ID or message.");
+  return message.reply("<:fsco_xMark:1506499171509866516> Please provide a valid message or user ID.");
 }
 
 let user;
@@ -117,7 +117,7 @@ try {
     }).catch(() => {});
   }
 
-  return message.reply(`<:check:1502740417370787881> **Successfully** sent message to <@${userId}>.`);
+  return message.reply(`<:fcso_check:1506063526182125608> Message sent to <@${userId}>.`);
 } catch (err) {
   console.error("DM command error:", err);
   return message.reply("<:xMark:1502740326668828703> Failed to messge user.");
