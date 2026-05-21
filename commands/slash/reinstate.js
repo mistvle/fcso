@@ -25,7 +25,7 @@ module.exports = {
 
     ),
 
-    async exeucte (interaction) {
+    async execute (interaction) {
         const hasRole = interaction.member.roles.cache.has("1324271492225044490");
         const isAdmin = interaction.member.permissions.has("Administrator");
 
