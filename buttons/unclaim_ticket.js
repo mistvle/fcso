@@ -38,7 +38,7 @@ module.exports = {
                     "components": [
                         {
                             "type": 10,
-                            "content": `<:xMark:1502740326668828703> ${interaction.user} has unclaimed this ticket.`
+                            "content": `> <:fcso_xMark:1506499171509866516> ${interaction.user} has unclaimed this ticket. Another member of our team will assist you shortly.`
                         }
                     ]
                 }

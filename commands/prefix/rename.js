@@ -11,21 +11,21 @@ module.exports = {
 
     if (!isAdmin && !hasRole) {
       return message.reply({
-        content: "<:xMark:1502740326668828703> You do **not ** have **permission** to use this command.",
+        content: "<:fcso_xMark:1506499171509866516> You do **not ** have **permission** to use this command.",
         allowedMentions: { repliedUser: false }
       });
     }
 
     if (!message.channel.topic) {
       return message.reply({
-        content: "<:xMark:1502740326668828703> This channel is not a ticket channel.",
+        content: "<:fcso_xMark:1506499171509866516> This channel is not a ticket channel.",
         allowedMentions: { repliedUser: false }
       });
     }
 
     if (!/^\d+$/.test(message.channel.topic)) {
       return message.reply({
-        content: "<:xMark:1502740326668828703> You can only rename ticket channels.",
+        content: "<:fcso_xMark:1506499171509866516> You can only rename ticket channels.",
         allowedMentions: { repliedUser: false }
       });
     }
@@ -34,7 +34,7 @@ module.exports = {
 
     if (!newName) {
       return message.reply({
-        content: "<:xMark:1502740326668828703> Failed to detect a valid new ticket name.",
+        content: "<:fcso_xMark:1506499171509866516> Failed to detect a valid new ticket name.",
         allowedMentions: { repliedUser: false }
       });
     }
@@ -42,12 +42,12 @@ module.exports = {
     try {
       await message.channel.setName(newName);
 
-      await message.reply(`<:check:1502740417370787881> **Successfully** renamed ticket to **${newName}**.`);
+      await message.reply("<:fcso_check:1506063526182125608> **Successfully** renamed ticket to **" + newName + "**.");
     } catch (err) {
       console.error(err);
 
       return message.reply({
-        content: "<:xMark:1502740326668828703> An eror occured.",
+        content: "<:fcso_xMark:1506499171509866516> An eror occured.",
         allowedMentions: { repliedUser: false }
       });
     }
