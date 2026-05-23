@@ -62,7 +62,7 @@ module.exports = {
       await channel.setName(name);
 
       return interaction.reply({
-        content: `<:check:1502740417370787881> Successfully renamed ticket to ${name}.`,
+        content: `<:check:1502740417370787881> **Successfully** renamed ticket to **${name}**.`,
         flags: 64
       });
     }
@@ -85,7 +85,7 @@ module.exports = {
         });
 
         return interaction.reply({
-          content: `<:check:1502740417370787881> Successfully added ${user} to the ticket.`,
+          content: `<:check:1502740417370787881> **Successfully** added ${user} to the ticket.`,
           flags: 64
         });
       }
@@ -97,7 +97,7 @@ module.exports = {
         });
 
         return interaction.reply({
-          content: `<:check:1502740417370787881> Successfully added ${role} to the ticket.`,
+          content: `<:check:1502740417370787881> **Successfully** added ${role} to the ticket.`,
           flags: 64
         });
       }
@@ -117,7 +117,7 @@ module.exports = {
       if (user) {
         await channel.permissionOverwrites.delete(user.id);
         return interaction.reply({
-          content: `<:check:1502740417370787881> Successfully removed ${user} from the ticket.`,
+          content: `<:check:1502740417370787881> **Successfully** removed ${user} from the ticket.`,
           flags: 64
         });
       }
@@ -125,7 +125,7 @@ module.exports = {
       if (role) {
         await channel.permissionOverwrites.delete(role.id);
         return interaction.reply({
-          content: `<:check:1502740417370787881> Successfully removed ${role} from the ticket.`,
+          content: `<:check:1502740417370787881> **Successfully** removed ${role} from the ticket.`,
           flags: 64
         });
       }
@@ -321,7 +321,7 @@ if (sub === "closerequest") {
       "components": [
         {
           "type": 10,
-          "content": `# <:fcso_bell:1504698291139641354> Close Request\n-# <@${userId}>`
+          "content": "# <:fcso_qmark:1501770231524098119> Close Request\n<@${userId}>"
         },
         {
           "type": 14,
@@ -329,7 +329,7 @@ if (sub === "closerequest") {
         },
         {
           "type": 10,
-          "content": "Our team feels you do not need further support within this ticket. If you do not need further support, please click the 'Close' button below. If you would like this ticket to remain open, please click the 'Keep Open' button to notify our team that you still need support."
+          "content": "Our team feels you do not need further assistance. If you do not need further assistance, please click the 'Close' button promptly. If you still need further assistance, feel free to click the 'Keep Open' button, and our team will assist you as soon as possible."
         },
         {
           "type": 14,
@@ -342,19 +342,16 @@ if (sub === "closerequest") {
               "style": 4,
               "type": 2,
               "label": "Close",
-              "flow": {
-                "actions": []
-              },
-              "custom_id": "close"
+              "custom_id": "close_ticket"
             },
             {
-              "style": 2,
+              "style": 3,
               "type": 2,
-              "label": "Keep Open",
+              "custom_id": "keep_open",
               "flow": {
                 "actions": []
               },
-              "custom_id": "keep_open"
+              "label": "Keep Open"
             }
           ]
         },
@@ -367,7 +364,7 @@ if (sub === "closerequest") {
           "items": [
             {
               "media": {
-                "url": "https://media.discordapp.net/attachments/1493677741801996488/1502496384002031706/Copy_of_Copy_of_GG_-_13.png?ex=6a072c8c&is=6a05db0c&hm=9820a4ae907974f7c80b14191aae8a92acbd0a9601845beb597e46de98cb35d5&=&format=webp&quality=lossless&width=1768&height=152"
+                "url": "https://media.discordapp.net/attachments/1493677741801996488/1502496384002031706/Copy_of_Copy_of_GG_-_13.png?ex=6a12614c&is=6a110fcc&hm=34b11f71277d3de76f4044a192f34102e0d8bcda3ba13657236b4b0d36b7e2ce&=&format=webp&quality=lossless&width=1768&height=152"
               }
             }
           ]
@@ -376,7 +373,7 @@ if (sub === "closerequest") {
     }
   ]
 });
-  await interaction.reply({content: "<:check:1502681323989504000> Succesfully sent close request.", flags: 64})
+  await interaction.reply({content: "<:check:1502681323989504000> **Succesfully** sent close request.", flags: 64})
 }
   }
 };
