@@ -107,7 +107,7 @@ module.exports = {
 });
 
         await interaction.reply({
-            content: `<:fcso_check:1506063526182125608> Your ticket has been created: ${channel}`,
+            content: `Your ticket has been created: ${channel}`,
             flags: 64
         });
     }
